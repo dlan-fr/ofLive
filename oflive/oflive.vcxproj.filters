@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\ofApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxAppEmscriptenWindow.cpp">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenSoundPlayer.cpp">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenSoundStream.cpp">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenURLFileLoader.cpp">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenVideoGrabber.cpp">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenVideoPlayer.cpp">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Convert.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src\ofxLua.cpp">
+      <Filter>addons\ofxLua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src\ofxLuaFileWriter.cpp">
+      <Filter>addons\ofxLua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src\bindings\desktop\ofxLuaBindings.cpp">
+      <Filter>addons\ofxLua\src\bindings</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons">
+      <UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxEmscripten">
+      <UniqueIdentifier>{83C572B1-7A3A-3D75-D184-11BB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxEmscripten\src">
+      <UniqueIdentifier>{1E2DC0DC-45AC-B1CA-1574-9A07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxEmscripten\libs">
+      <UniqueIdentifier>{CF9BED10-7DF6-0E4F-7042-9F93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxEmscripten\libs\html5audio">
+      <UniqueIdentifier>{83D6FAE1-1E7B-1976-A656-4CA8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxEmscripten\libs\html5audio\include">
+      <UniqueIdentifier>{4BA231B1-9FC7-702E-4BCD-3AED}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxEmscripten\libs\html5video">
+      <UniqueIdentifier>{464D5EEE-2689-3A66-D1A8-0F24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxEmscripten\libs\html5video\include">
+      <UniqueIdentifier>{4FB5C93D-E42F-3E2C-E279-A3CC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxLua">
+      <UniqueIdentifier>{3ecd1ac0-94e0-4ca9-abb6-02789fe178b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxLua\src">
+      <UniqueIdentifier>{f8221768-0a71-4dee-85ab-99dfe0fc74f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="addons\ofxLua\src\bindings">
+      <UniqueIdentifier>{af3a4736-fb49-4bde-8240-7a0fa37fbee1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ofApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxAppEmscriptenWindow.h">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenSoundPlayer.h">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenSoundStream.h">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenURLFileLoader.h">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenVideoGrabber.h">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenVideoPlayer.h">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\include\html5audio.h">
+      <Filter>addons\ofxEmscripten\libs\html5audio\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\include\html5video.h">
+      <Filter>addons\ofxEmscripten\libs\html5video\include</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Convert.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src\ofxLua.h">
+      <Filter>addons\ofxLua\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src\ofxLuaFileWriter.h">
+      <Filter>addons\ofxLua\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src\bindings\ofxLuaBindings.h">
+      <Filter>addons\ofxLua\src\bindings</Filter>
+    </ClInclude>
+    <ClInclude Include="src\oflive_editor.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
