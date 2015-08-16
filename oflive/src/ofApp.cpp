@@ -1,16 +1,20 @@
-/*
- * Copyright (c) 2012 Dan Wilcox <danomatika@gmail.com>
- *
- * BSD Simplified License.
- * For information on usage and redistribution, and for a DISCLAIMER OF ALL
- * WARRANTIES, see the file, "LICENSE.txt," in this distribution.
- *
- * See https://github.com/danomatika/ofxLua for documentation
- *
- */
 #include "ofApp.h"
 
-//--------------------------------------------------------------
+
+//c glue code
+static bool need_script_reload = false;
+static std::vector<char> js_buffer;
+
+int backend_loadlua(const char* scriptcontent)
+{
+	js_buffer.empty();
+	js_buffer.insert(js_buffer.begin(),scriptcontent,scriptcontent + strlen(scriptcontent)+1);
+
+	need_script_reload = true;
+	return 0;
+}
+
+//application code
 void ofApp::setup() {
 
 	ofSetVerticalSync(true);
@@ -56,6 +60,17 @@ void ofApp::setup() {
 void ofApp::update() {
 	// call the script's update() function
 	lua.scriptUpdate();
+
+	if(need_script_reload)
+	{
+		std::string param(js_buffer.begin(),js_buffer.end());
+
+		lua.scriptExit();
+		lua.init();
+		lua.doString(param);
+		lua.scriptSetup();
+		need_script_reload = false;
+	}
 }
 
 //--------------------------------------------------------------

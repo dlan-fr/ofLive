@@ -1,3 +1,5 @@
+local inspect = require("inspect")
+
 ----------------------------------------------------
 --Base ofLive template------------------------------
 ----------------------------------------------------
@@ -20,15 +22,14 @@ end
 
 ----------------------------------------------------
 function exit()
-	print("finish ofLive base script")
+	
 end
 
 -- input callbacks
 
 ----------------------------------------------------
 function keyPressed(key)
-	-- print out key as ascii val & char (keep within ascii 0-127 range)
-	print("script keyPressed: "..tostring(key))
+
 end
 
 function mouseDragged(x,y,button)
