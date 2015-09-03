@@ -1,0 +1,37 @@
+/**
+*   OfLive: main css stylesheet, contains all styling for container of the main window
+**/
+
+#top_editor {
+    position: absolute;
+    width:50%;
+    top: 0;
+    right: 0;
+    left: 50%;
+}
+#editor { 
+    position: absolute;
+    width:50%;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+}
+#application {
+    position: absolute;
+    width:50%;
+    top:0;
+    left:0;
+    bottom:0;
+    right: 50%;
+}
+#output {
+    width: 50%;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: block;
+    background-color: black;
+    color: white;
+    font-family: 'Lucida Console', Monaco, monospace;
+    outline: none;
+  }
