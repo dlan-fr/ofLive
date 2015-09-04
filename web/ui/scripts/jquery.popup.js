@@ -40,7 +40,7 @@
 					
 					$.ajax({
 					type: "GET",
-					url: "Index.php?action="+target_action,
+					url: "index.php?action="+target_action,
                                         data: Targetdata,
 					success: pageload_callback
 				   });
