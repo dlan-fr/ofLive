@@ -51,11 +51,16 @@
 			//Our function for hiding the modalbox
 			function modalHide() {
 				$(document).unbind("keydown", handleEscape);
-				var remove = function() { $(this).remove(); };
+				var remove = function() 
+                                {
+                                    $(this).remove();
+                                    modalinnerWindow.empty();
+                                    modalHeader.empty();
+                                };
+                                
 				overlay.fadeOut(remove);
 				modalWindow.fadeOut(remove);
-				modalinnerWindow.empty();
-				modalHeader.empty();
+				
 			}
 			
 			function pageload_callback(res)
@@ -76,7 +81,7 @@
 				
 				//d�finir une taille fixe pour que le popup ne prenne pas tout l'�cran sous ie
 				//et que le centrage du popup soit correct
-				modalWindow.css("width",modalWindow.width()+"px");
+				//modalWindow.css("width",modalWindow.width()+"px");
 				
 				modalWindow.fadeIn(150);
 				

@@ -55,3 +55,12 @@ canvas {
     font-family: 'Lucida Console', Monaco, monospace;
     outline: none;
  }
+ 
+ #name_script
+ {
+     color: #fff;
+     font-size: 1.4em;
+     padding: 10px 5px;
+     display: block;
+     float: left;
+ }

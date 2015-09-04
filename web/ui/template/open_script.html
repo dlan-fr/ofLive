@@ -1,4 +1,5 @@
 <script type='text/javascript'>
+    $('#modal_title').html('open script');
     var pathcontent = FS.lookupPath('/oflivescripts');
     
     for(var file in pathcontent.node.contents)
@@ -9,6 +10,12 @@
         }
     }
     
+    
+    $(".script_row").click(function(e) {
+        $('#name_script').text($(this).text());
+        OFLIVE.backend_openscript($(this).text());
+        $("#img_close").click();
+    } );
     
 </script>
 

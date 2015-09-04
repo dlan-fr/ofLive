@@ -27,7 +27,6 @@ int backend_newscript(const char* script_name)
 	}
 
 	ofBuffer scriptBuffer = ofBufferFromFile("scripts/basescript.lua");
-
 	std::string script_n(script_name);
 
 	std::string file_path(scripts_directory.getAbsolutePath() + script_n+".lua");
@@ -57,6 +56,29 @@ int backend_newscript(const char* script_name)
 	return 0;
 }
 
+int backend_openscript(const char* script_name)
+{
+	ofFile script_file(scripts_directory.getAbsolutePath() + script_name);
+
+	if(!script_file.exists())
+	{
+		ofLogError() << "Script file "+script_file.getFileName()+" doesn't exist!";
+		return 0;
+	}
+
+	ifstream istr(script_file.getAbsolutePath(), ios_base::in);
+	ofBuffer scriptBuffer(istr); 
+	istr.close();
+
+
+	lua.scriptExit();
+	lua.init();
+	editor_loadscript(scriptBuffer.getData());
+	lua.doString(scriptBuffer.getData());
+	lua.scriptSetup();
+
+	return 0;
+}
 
 
 

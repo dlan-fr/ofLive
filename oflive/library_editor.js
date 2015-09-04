@@ -3,6 +3,7 @@ var LibraryOfLive = {
         editor: null,
         backend_loadlua: null,
         backend_newscript: null,
+        backend_openscript: null,
      },
 
     editor_init: function()
@@ -26,6 +27,8 @@ var LibraryOfLive = {
         //bind c glue functions
         OFLIVE.backend_loadlua = Module.cwrap('backend_loadlua','number',['string']);
         OFLIVE.backend_newscript = Module.cwrap('backend_newscript','number',['string']);
+        OFLIVE.backend_openscript = Module.cwrap('backend_openscript','number',['string']);
+        
         //custom commands
         OFLIVE.editor.commands.addCommand({
             name: 'saveScript',
