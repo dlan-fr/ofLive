@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>OfLive</title>
+<link rel="stylesheet" type="text/css" media="screen" href="ui/style/main.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="ui/style/menu_dropdown.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="ui/style/popup.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="ui/style/table.css" />
+
+</head>
+<body>
+
+ <canvas id="progresscanvas" width="1024" height="768" ></canvas>
+    
+<div id="application">
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+    <textarea id="output" rows="8" ></textarea>
+</div>
+
+<div id="top_editor">
+<ul class="editor_menu">
+    <li><span>File</span>
+        <ul class="editor_submenu">
+            <li><span id="new_script" class="popup">New</span></li>
+            <li><span id="open_script" class="popup">Open</span></li>
+            <li><span id="save_script">Save (Ctrl+S)</span></li>
+            <li><span id="share_script" class="popup">Share</span></li>
+        </ul>
+    </li>
+    <li>
+        <span>Edit</span>
+        <ul class="editor_submenu">
+            <li><span id="account" class="popup">Account</span></li>
+            <li><span id="properties" class="popup">Properties</span></li>
+            <li><span id="plugins" class="popup">Plugins</span></li>
+        </ul>
+    </li>
+</ul>
+    
+    <span id="name_script">Unnamed_script.lua</span>
+</div>
+
+<div id="editor">
+</div>
+    
+<script src="ui/ace-builds-1.2.0/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="ui/scripts/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="ui/scripts/jquery.forms.js" type="text/javascript" charset="utf-8"></script>
+<script src="ui/scripts/jquery.popup.js" type="text/javascript" charset="utf-8"></script>
+<script src="ui/scripts/jquery.msgbox.js" type="text/javascript" charset="utf-8"></script>
+<script src="ui/scripts/menu_editor.js" type="text/javascript" charset="utf-8"></script>
+<script src="ui/scripts/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+<script src="ui/scripts/loader.js" type="text/javascript" charset="utf-8"></script>
+
+
+<script type='text/javascript'>
+     var Module = {
+        preRun: [],
+        postRun: [],
+        print: (function() {
+          var element = document.getElementById('output');
+          if (element) element.value = ''; // clear browser cache
+          return function(text) {
+            text = Array.prototype.slice.call(arguments).join(' ');
+            console.log(text);
+            if (element) {
+              element.value += text + "\n";
+              element.scrollTop = element.scrollHeight; // focus on bottom
+            }
+          };
+        })(),
+        printErr: function(text) {
+          text = Array.prototype.slice.call(arguments).join(' ');
+          if (0) { // XXX disabled for safety typeof dump == 'function') {
+            dump(text + '\n'); // fast, straight to the real console
+          } else {
+            console.error(text);
+          }
+        },
+		
+		setStatus: function(text) {
+			//if(text=="Running...")
+			//{
+			//	document.getElementById('progresscanvas').style.display = 'none';
+			//	document.getElementById('canvas').style.display = 'block';
+			//}
+		
+		},
+        canvas: (function() {
+          var canvas = document.getElementById('canvas');
+          // As a default initial behavior, pop up an alert when webgl context is lost. To make your
+          // application robust, you may want to override this behavior before shipping!
+          // See http://www.khronos.org/registry/webgl/specs/latest/1.0/#5.15.2
+          canvas.addEventListener("webglcontextlost", function(e) { alert('WebGL context lost. You will need to reload the page.'); e.preventDefault(); }, false);
+
+          return canvas;
+        })()
+      };
+      
+      window.onerror = function(event) {
+        // TODO: do not warn on ok events like simulating an infinite loop or exitStatus
+        Module.setStatus('Exception thrown, see JavaScript console');
+        Module.setStatus = function(text) {
+          if (text) Module.printErr('[post-exception status] ' + text);
+        };
+      };
+      
+       Module.filePackagePrefixURL = 'emscripten_app/';
+      
+      document.getElementById('application').style.display = 'none';
+      document.getElementById('top_editor').style.display = 'none';
+      document.getElementById('editor').style.display = 'none';
+      
+      LoadApp();
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<script type='text/javascript'>
+    $('#modal_title').html('open script');
+    var pathcontent = FS.lookupPath('/oflivescripts');
+    
+    for(var file in pathcontent.node.contents)
+    {
+        if(pathcontent.node.contents.hasOwnProperty(file))
+        {
+            $('#list_scripts').append('<tr class="script_row"><td>'+file+'</td></tr>');
+        }
+    }
+    
+    
+    $(".script_row").click(function(e) {
+        $('#name_script').text($(this).text());
+        OFLIVE.backend_openscript($(this).text());
+        $("#img_close").click();
+    } );
+    
+</script>
+
+<table id="list_scripts">
+    
+</table>

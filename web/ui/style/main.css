@@ -1,0 +1,66 @@
+/**
+*   OfLive: main css stylesheet, contains all styling for container of the main window
+**/
+
+body
+{
+    background-color: black;
+}
+
+#top_editor {
+    position: absolute;
+    width:50%;
+    top: 0;
+    right: 0;
+    left: 50%;
+}
+
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.emscripten
+{
+    top: 55px;
+}
+
+#editor { 
+    position: absolute;
+    width:50%;
+    top:55px;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+}
+#application {
+    position: absolute;
+    width:50%;
+    top:0;
+    left:0;
+    bottom:0;
+    right: 50%;
+}
+#output {
+    width: 99%;
+    height: 200px;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: block;
+    background-color: black;
+    color: white;
+    font-family: 'Lucida Console', Monaco, monospace;
+    outline: none;
+ }
+ 
+ #name_script
+ {
+     color: #fff;
+     font-size: 1.4em;
+     padding: 10px 5px;
+     display: block;
+     float: left;
+ }
