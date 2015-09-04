@@ -1,0 +1,17 @@
+<script type='text/javascript'>
+    var pathcontent = FS.lookupPath('/oflivescripts');
+    
+    for(var file in pathcontent.node.contents)
+    {
+        if(pathcontent.node.contents.hasOwnProperty(file))
+        {
+            $('#list_scripts').append('<tr class="script_row"><td>'+file+'</td></tr>');
+        }
+    }
+    
+    
+</script>
+
+<table id="list_scripts">
+    
+</table>

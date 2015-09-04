@@ -1,0 +1,14 @@
+/**
+* OfLive: style for scripts table
+**/
+
+.script_row
+{
+    background-color: #fff;
+    cursor:pointer;
+}
+
+.script_row:hover
+{
+    background-color: #444;
+}

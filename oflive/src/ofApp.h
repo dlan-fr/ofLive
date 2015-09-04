@@ -50,7 +50,6 @@ class ofApp : public ofBaseApp, ofxLuaListener {
 		void nextScript();
 		void prevScript();
 
-		ofxLua lua;
 		vector<string> scripts;
 		int currentScript;
 };

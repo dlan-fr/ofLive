@@ -4,6 +4,10 @@
 //c glue code
 static bool need_script_reload = false;
 static std::vector<char> js_buffer;
+static bool IDBFS_ready = false;
+static ofDirectory scripts_directory;
+static ofxLua lua;
+
 
 int backend_loadlua(const char* scriptcontent)
 {
@@ -13,6 +17,48 @@ int backend_loadlua(const char* scriptcontent)
 	need_script_reload = true;
 	return 0;
 }
+
+int backend_newscript(const char* script_name)
+{
+	if(!IDBFS_ready)
+	{
+		ofLogNotice() << "Script directory not ready, can't create new script";
+		return 0;
+	}
+
+	ofBuffer scriptBuffer = ofBufferFromFile("scripts/basescript.lua");
+
+	std::string script_n(script_name);
+
+	std::string file_path(scripts_directory.getAbsolutePath() + script_n+".lua");
+
+	ofstream ostr(file_path.c_str(), ios_base::out);
+
+	if(!scriptBuffer.writeTo(ostr))
+		ofLogError() << "Error while saving " +file_path;
+
+	ostr.close(); 
+
+	//persist data
+	EM_ASM(
+		FS.syncfs(false, function(err) {
+                    Module.print("OfLive: sync new script");
+                    assert(!err);
+                    });
+	);
+
+
+	lua.scriptExit();
+	lua.init();
+	editor_loadscript(scriptBuffer.getData());
+	lua.doString(scriptBuffer.getData());
+	lua.scriptSetup();
+
+	return 0;
+}
+
+
+
 
 //application code
 void ofApp::setup() {
@@ -54,10 +100,29 @@ void ofApp::setup() {
 
 	// call the script's setup() function
 	lua.scriptSetup();
+
+	emscripten_run_script("showOutputWindow()");
 }
 
 //--------------------------------------------------------------
 void ofApp::update() {
+
+	//check if IDBFS sync is done
+	if(!IDBFS_ready)
+	{
+		if(emscripten_run_script_int("Module.syncdone") == 1)
+		{
+			scripts_directory.open("/oflivescripts");
+
+			if(!scripts_directory.exists())
+				ofLogError() << "scripts directory doesn't exists !";
+
+			IDBFS_ready = true;
+		}
+	}
+
+
+
 	// call the script's update() function
 	lua.scriptUpdate();
 

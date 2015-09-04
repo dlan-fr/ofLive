@@ -162,7 +162,7 @@
       </AdditionalLibraryDirectories>
       <LinkerOptimizationLevel>O1</LinkerOptimizationLevel>
       <JsLibrary>D:\devel\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\lib\emscripten\library_html5video.js;D:\devel\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\lib\emscripten\library_html5audio.js;.\library_editor.js;%(JsLibrary)</JsLibrary>
-      <AdditionalOptions>-s TOTAL_MEMORY=134217728 --memory-init-file 1 -Wl,--as-needed -Wl,--gc-sections --preload-file bin/data@data -g3 -s DISABLE_EXCEPTION_CATCHING=0 -s EXPORTED_FUNCTIONS='["_main","_backend_loadlua"]' %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-s TOTAL_MEMORY=134217728 --memory-init-file 0 --preload-file bin/data@data  -Wl,--as-needed -Wl,--gc-sections -g3 -s DISABLE_EXCEPTION_CATCHING=0 -s EXPORTED_FUNCTIONS='["_main","_backend_loadlua","_backend_newscript"]' %(AdditionalOptions)</AdditionalOptions>
       <EchoCommandLines>true</EchoCommandLines>
     </Link>
     <PostBuildEvent />
@@ -170,9 +170,8 @@
       <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
     <PostBuildEvent>
-      <Command>copy /Y $(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName).js ..\web\$(ProjectName).js
-copy /Y $(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName).data ..\web\$(ProjectName).data
-copy /Y $(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName).html.mem ..\web\$(ProjectName).html.mem</Command>
+      <Command>copy /Y $(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName).js ..\web\emscripten_app\$(ProjectName).js
+copy /Y $(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName).data ..\web\emscripten_app\$(ProjectName).data</Command>
       <Message>export to web directory</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>

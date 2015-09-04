@@ -1,34 +1,48 @@
 var LibraryOfLive = {
-	$OFLIVE: {
-		editor: null,
-		backend_loadlua: null,
-	 },
+    $OFLIVE: {
+        editor: null,
+        backend_loadlua: null,
+        backend_newscript: null,
+     },
 
-	editor_init: function()
-	{
-		OFLIVE.editor = ace.edit("editor");
-		OFLIVE.editor.setTheme("ace/theme/monokai");
-		OFLIVE.editor.getSession().setMode("ace/mode/lua");
-		
-		//bind c glue functions
-		OFLIVE.backend_loadlua = Module.cwrap('backend_loadlua','number',['string']);
-		//custom commands
-		OFLIVE.editor.commands.addCommand({
-			name: 'saveScript',
-			bindKey: {win: 'Ctrl-S', mac: 'Command-S'},
-			exec: function(editor) {
-				OFLIVE.backend_loadlua(editor.getValue());
-			},
-			readOnly: false
-		});
-	},
+    editor_init: function()
+    {
+        OFLIVE.editor = ace.edit("editor");
+        OFLIVE.editor.setTheme("ace/theme/monokai");
+        OFLIVE.editor.getSession().setMode("ace/mode/lua");
+        
+        //mount read/write filesystem
+        FS.mkdir('/oflivescripts');
+        FS.mount(IDBFS,{},'/oflivescripts');
+        Module.print("ofLive: Start scripts sync...");
+        Module.syncdone = 0;
+        
+        FS.syncfs(true,function(err) {
+            assert(!err);
+            Module.print("OfLive: End scripts sync");
+            Module.syncdone = 1;
+       });
+        
+        //bind c glue functions
+        OFLIVE.backend_loadlua = Module.cwrap('backend_loadlua','number',['string']);
+        OFLIVE.backend_newscript = Module.cwrap('backend_newscript','number',['string']);
+        //custom commands
+        OFLIVE.editor.commands.addCommand({
+            name: 'saveScript',
+            bindKey: {win: 'Ctrl-S', mac: 'Command-S'},
+            exec: function(editor) {
+                OFLIVE.backend_loadlua(editor.getValue());
+            },
+            readOnly: false
+        });
+    },
 
 
-	editor_loadscript: function(scriptptr) 
-	{
-		var scriptcontent = Pointer_stringify(scriptptr);
-		OFLIVE.editor.setValue(scriptcontent);
-	},
+    editor_loadscript: function(scriptptr) 
+    {
+        var scriptcontent = Pointer_stringify(scriptptr);
+        OFLIVE.editor.setValue(scriptcontent);
+    },
 
 }
 

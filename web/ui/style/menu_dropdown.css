@@ -45,6 +45,7 @@ ul.editor_menu li ul.editor_submenu {
     float: left;
     width: 170px;
     border: 1px solid #111;
+    z-index: 5;
 }
 ul.editor_menu li ul.editor_submenu li{
     margin: 0; padding: 0;
