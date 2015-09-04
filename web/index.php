@@ -7,6 +7,6 @@ require_once("libs/class.httpcontext.php");
 $context = new HttpContext();
 $context->ProcessRequest();
 
-require_once('UI/src/main.php');
+require_once('ui/src/main.php');
 
 $context->EndRequest();
