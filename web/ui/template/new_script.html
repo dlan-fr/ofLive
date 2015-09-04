@@ -4,7 +4,7 @@
     $('#newscript_form').submit(function(e){
            if($("#script_name").val())
             {
-                $('#name_script').text($("#script_name").val());
+                $('#name_script').text($("#script_name").val()+".lua");
                 OFLIVE.backend_newscript($("#script_name").val());
                 
                 $("#img_close").click();

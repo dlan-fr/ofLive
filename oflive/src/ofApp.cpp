@@ -80,6 +80,30 @@ int backend_openscript(const char* script_name)
 	return 0;
 }
 
+int backend_savescript(const char* script_name,const char* scriptcontent)
+{
+	ofFile save_script(scripts_directory.getAbsolutePath() + script_name);
+
+	ofBuffer scriptBuffer = ofBuffer(scriptcontent,strlen(scriptcontent)+1);
+
+	ofstream ostr(save_script.getAbsolutePath(), ios_base::out);
+
+	if(!scriptBuffer.writeTo(ostr))
+		ofLogError() << "Error while saving " +save_script.getFileName();
+
+	ostr.close();  
+
+	//persist data
+	EM_ASM(
+		FS.syncfs(false, function(err) {
+                    assert(!err);
+                    });
+	);
+
+
+	return 0;
+}
+
 
 
 //application code

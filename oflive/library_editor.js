@@ -4,6 +4,7 @@ var LibraryOfLive = {
         backend_loadlua: null,
         backend_newscript: null,
         backend_openscript: null,
+        backend_savescript: null,
      },
 
     editor_init: function()
@@ -28,12 +29,14 @@ var LibraryOfLive = {
         OFLIVE.backend_loadlua = Module.cwrap('backend_loadlua','number',['string']);
         OFLIVE.backend_newscript = Module.cwrap('backend_newscript','number',['string']);
         OFLIVE.backend_openscript = Module.cwrap('backend_openscript','number',['string']);
+        OFLIVE.backend_savescript = Module.cwrap('backend_savescript','number',['string','string']);
         
         //custom commands
         OFLIVE.editor.commands.addCommand({
             name: 'saveScript',
             bindKey: {win: 'Ctrl-S', mac: 'Command-S'},
             exec: function(editor) {
+                 OFLIVE.backend_savescript($('#name_script').text(),editor.getValue());
                 OFLIVE.backend_loadlua(editor.getValue());
             },
             readOnly: false

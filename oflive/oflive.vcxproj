@@ -162,7 +162,7 @@
       </AdditionalLibraryDirectories>
       <LinkerOptimizationLevel>O1</LinkerOptimizationLevel>
       <JsLibrary>D:\devel\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\lib\emscripten\library_html5video.js;D:\devel\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\lib\emscripten\library_html5audio.js;.\library_editor.js;%(JsLibrary)</JsLibrary>
-      <AdditionalOptions>-s TOTAL_MEMORY=134217728 --memory-init-file 0 --preload-file bin/data@data  -Wl,--as-needed -Wl,--gc-sections -g3 -s DISABLE_EXCEPTION_CATCHING=0 -s EXPORTED_FUNCTIONS='["_main","_backend_loadlua","_backend_newscript","_backend_openscript"]' %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>-s TOTAL_MEMORY=134217728 --memory-init-file 0 --preload-file bin/data@data  -Wl,--as-needed -Wl,--gc-sections -g3 -s DISABLE_EXCEPTION_CATCHING=0 -s EXPORTED_FUNCTIONS='["_main","_backend_loadlua","_backend_newscript","_backend_openscript","_backend_savescript"]' %(AdditionalOptions)</AdditionalOptions>
       <EchoCommandLines>true</EchoCommandLines>
     </Link>
     <PostBuildEvent />

@@ -4,6 +4,10 @@
 
 function init_menu()
 {
+    $("#save_script").click(function() {
+       OFLIVE.backend_savescript($('#name_script').text(),OFLIVE.editor.getValue());
+    });
+    
     $("ul.editor_submenu").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled (Adds empty span tag after ul.subnav*)
     
     $("ul.editor_menu li span").click(function() { //When trigger is clicked...

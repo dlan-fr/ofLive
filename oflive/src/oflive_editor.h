@@ -9,4 +9,5 @@ extern "C" {
 	int backend_loadlua(const char* scriptcontent);
 	int backend_newscript(const char* script_name);
 	int backend_openscript(const char* script_name);
+	int backend_savescript(const char* script_name,const char* scriptcontent);
 }
