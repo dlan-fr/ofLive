@@ -5,6 +5,8 @@ var LibraryOfLive = {
         backend_newscript: null,
         backend_openscript: null,
         backend_savescript: null,
+        opened_script: "",
+        readonly_script: false,
      },
 
     editor_init: function()
@@ -28,7 +30,7 @@ var LibraryOfLive = {
         //bind c glue functions
         OFLIVE.backend_loadlua = Module.cwrap('backend_loadlua','number',['string']);
         OFLIVE.backend_newscript = Module.cwrap('backend_newscript','number',['string']);
-        OFLIVE.backend_openscript = Module.cwrap('backend_openscript','number',['string']);
+        OFLIVE.backend_openscript = Module.cwrap('backend_openscript','number',['string','number']);
         OFLIVE.backend_savescript = Module.cwrap('backend_savescript','number',['string','string']);
         
         //custom commands
@@ -36,8 +38,18 @@ var LibraryOfLive = {
             name: 'saveScript',
             bindKey: {win: 'Ctrl-S', mac: 'Command-S'},
             exec: function(editor) {
-                 OFLIVE.backend_savescript($('#name_script').text(),editor.getValue());
-                OFLIVE.backend_loadlua(editor.getValue());
+                //check first if the script is read only and if a name exist
+                if(OFLIVE.readonly_script == true)
+                    return;
+                
+                //no name, open name input popup
+                if(OFLIVE.opened_script == "") {
+                     $("#save_script_name").click();
+                }
+                else {
+                    OFLIVE.backend_savescript($('#name_script').text(),editor.getValue());
+                    OFLIVE.backend_loadlua(editor.getValue());
+                }
             },
             readOnly: false
         });

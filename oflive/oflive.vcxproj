@@ -128,7 +128,7 @@
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\include;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\lib;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\lib\emscripten;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\include;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\lib;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\lib\emscripten;..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\include;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\lib;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\lib\emscripten;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\include;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\lib;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\lib\emscripten;..\..\..\common\of_v20150907_vs_release\addons\ofxLua\src</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
@@ -147,7 +147,7 @@
       <PreprocessorDefinitions>__EMSCRIPTEN__</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\include;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\lib;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\lib\emscripten;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\include;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\lib;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\lib\emscripten;D:\devel\common\of_v20150707_vs_release\libs\openFrameworks;D:\devel\common\of_v20150707_vs_release\libs\openFrameworks\utils;D:\devel\common\of_v20150707_vs_release\libs\openFrameworks\video;D:\devel\common\of_v20150707_vs_release\libs\openFrameworks\types;D:\devel\common\of_v20150707_vs_release\libs\openFrameworks\sound;D:\devel\common\of_v20150707_vs_release\libs\openFrameworks\math;D:\devel\common\of_v20150707_vs_release\libs\openFrameworks\graphics;D:\devel\common\of_v20150707_vs_release\libs\openFrameworks\gl;D:\devel\common\of_v20150707_vs_release\libs\openFrameworks\events;D:\devel\common\of_v20150707_vs_release\libs\openFrameworks\app;D:\devel\common\of_v20150707_vs_release\libs\openFrameworks\3d;D:\devel\common\of_v20150707_vs_release\libs\tess2\include;D:\devel\common\of_v20150707_vs_release\libs\poco\include;D:\devel\common\of_v20150707_vs_release\libs\boost\include;D:\devel\common\of_v20150707_vs_release\libs\utf8cpp\include;D:\devel\common\OpenCV_3_0_0\opencv\build\include;..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src;..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src\bindings;..\..\..\common\lua-5.2.3\include;.\src</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\include;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\lib;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\lib\emscripten;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\include;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\lib;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\lib\emscripten;D:\devel\common\of_v20150907_vs_release\libs\openFrameworks;D:\devel\common\of_v20150907_vs_release\libs\openFrameworks\utils;D:\devel\common\of_v20150907_vs_release\libs\openFrameworks\video;D:\devel\common\of_v20150907_vs_release\libs\openFrameworks\types;D:\devel\common\of_v20150907_vs_release\libs\openFrameworks\sound;D:\devel\common\of_v20150907_vs_release\libs\openFrameworks\math;D:\devel\common\of_v20150907_vs_release\libs\openFrameworks\graphics;D:\devel\common\of_v20150907_vs_release\libs\openFrameworks\gl;D:\devel\common\of_v20150907_vs_release\libs\openFrameworks\events;D:\devel\common\of_v20150907_vs_release\libs\openFrameworks\app;D:\devel\common\of_v20150907_vs_release\libs\openFrameworks\3d;D:\devel\common\of_v20150907_vs_release\libs\tess2\include;D:\devel\common\of_v20150907_vs_release\libs\poco\include;D:\devel\common\of_v20150907_vs_release\libs\boost\include;D:\devel\common\of_v20150907_vs_release\libs\utf8cpp\include;D:\devel\common\OpenCV_3_0_0\opencv\build\include;..\..\..\common\of_v20150907_vs_release\addons\ofxLua\src;..\..\..\common\of_v20150907_vs_release\addons\ofxLua\src\bindings;..\..\..\common\lua-5.2.3\include;.\src</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <OptimizationLevel>O2</OptimizationLevel>
       <AdditionalOptions>-std=c++11 -Wall -Wno-warn-absolute-paths -g3 %(AdditionalOptions)</AdditionalOptions>
@@ -157,17 +157,18 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
-      <AdditionalDependencies>D:\devel\common\of_v20150707_vs_release\libs\openFrameworksCompiled\lib\vs\Emscripten\libopenFrameworks.bc;$(COMMON_LIBS_ROOT)freetype-2.4.11\builds\win32\vc2010\Emscripten\Release\freetype.bc;D:\devel\common\of_v20150707_vs_release\libs\FreeImage\lib\emscripten\libfreeimage.a;D:\devel\common\of_v20150707_vs_release\libs\tess2\lib\emscripten\libtess2.a;D:\devel\common\of_v20150707_vs_release\libs\boost\lib\emscripten\libboost_filesystem.a;D:\devel\common\of_v20150707_vs_release\libs\boost\lib\emscripten\libboost_system.a;D:\devel\common\lua-5.2.3\Release\liblua.bc</AdditionalDependencies>
+      <AdditionalDependencies>D:\devel\common\of_v20150907_vs_release\libs\openFrameworksCompiled\lib\vs\Emscripten\openframeworksLib_debug.bc;D:\devel\common\of_v20150907_vs_release\libs\freetype\lib\emscripten\libfreetype.bc;D:\devel\common\of_v20150907_vs_release\libs\FreeImage\lib\emscripten\libfreeimage.a;D:\devel\common\of_v20150907_vs_release\libs\tess2\lib\emscripten\libtess2.a;D:\devel\common\of_v20150907_vs_release\libs\boost\lib\emscripten\libboost_filesystem.a;D:\devel\common\of_v20150907_vs_release\libs\boost\lib\emscripten\libboost_system.a;D:\devel\common\lua-5.2.3\Release\liblua.bc</AdditionalDependencies>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
-      <LinkerOptimizationLevel>O3</LinkerOptimizationLevel>
-      <JsLibrary>D:\devel\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\lib\emscripten\library_html5video.js;D:\devel\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\lib\emscripten\library_html5audio.js;.\library_editor.js;%(JsLibrary)</JsLibrary>
+      <LinkerOptimizationLevel>O1</LinkerOptimizationLevel>
+      <JsLibrary>D:\devel\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\lib\emscripten\library_html5video.js;D:\devel\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\lib\emscripten\library_html5audio.js;.\library_editor.js;%(JsLibrary)</JsLibrary>
       <AdditionalOptions>-s TOTAL_MEMORY=134217728 --memory-init-file 0 --preload-file bin/data@data  -Wl,--as-needed -Wl,--gc-sections -g3 -s DISABLE_EXCEPTION_CATCHING=0 -s EXPORTED_FUNCTIONS='["_main","_backend_loadlua","_backend_newscript","_backend_openscript","_backend_savescript"]' %(AdditionalOptions)</AdditionalOptions>
       <EchoCommandLines>true</EchoCommandLines>
     </Link>
     <PostBuildEvent />
     <ProjectReference>
-      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
     </ProjectReference>
     <PostBuildEvent>
       <Command>copy /Y $(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName).js ..\web\emscripten_app\$(ProjectName).js
@@ -182,7 +183,7 @@ copy /Y $(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName).data ..\web\em
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\include;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\lib;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\lib\emscripten;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\include;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\lib;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\lib\emscripten</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\include;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\lib;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\lib\emscripten;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\include;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\lib;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\lib\emscripten</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -201,7 +202,7 @@ copy /Y $(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName).data ..\web\em
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\include;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\lib;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\lib\emscripten;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\include;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\lib;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\lib\emscripten</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\include;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\lib;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\lib\emscripten;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\include;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\lib;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\lib\emscripten</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -223,7 +224,7 @@ copy /Y $(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName).data ..\web\em
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\include;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\lib;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\lib\emscripten;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\include;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\lib;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\lib\emscripten</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\include;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\lib;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\lib\emscripten;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\include;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\lib;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\lib\emscripten</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
@@ -245,7 +246,7 @@ copy /Y $(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName).data ..\web\em
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
-      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\include;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\lib;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\lib\emscripten;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\include;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\lib;..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\lib\emscripten</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\include;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\lib;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\lib\emscripten;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\include;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\lib;..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\lib\emscripten</AdditionalIncludeDirectories>
       <CompileAs>CompileAsCpp</CompileAs>
     </ClCompile>
     <Link>
@@ -261,33 +262,33 @@ copy /Y $(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName).data ..\web\em
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src\bindings\desktop\ofxLuaBindings.cpp" />
-    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src\ofxLua.cpp" />
-    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src\ofxLuaFileWriter.cpp" />
+    <ClCompile Include="..\..\..\common\of_v20150907_vs_release\addons\ofxLua\src\bindings\desktop\ofxLuaBindings.cpp" />
+    <ClCompile Include="..\..\..\common\of_v20150907_vs_release\addons\ofxLua\src\ofxLua.cpp" />
+    <ClCompile Include="..\..\..\common\of_v20150907_vs_release\addons\ofxLua\src\ofxLuaFileWriter.cpp" />
     <ClCompile Include="src\Convert.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\ofApp.cpp" />
-    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxAppEmscriptenWindow.cpp" />
-    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenSoundPlayer.cpp" />
-    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenSoundStream.cpp" />
-    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenURLFileLoader.cpp" />
-    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenVideoGrabber.cpp" />
-    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenVideoPlayer.cpp" />
+    <ClCompile Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxAppEmscriptenWindow.cpp" />
+    <ClCompile Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxEmscriptenSoundPlayer.cpp" />
+    <ClCompile Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxEmscriptenSoundStream.cpp" />
+    <ClCompile Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxEmscriptenURLFileLoader.cpp" />
+    <ClCompile Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxEmscriptenVideoGrabber.cpp" />
+    <ClCompile Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxEmscriptenVideoPlayer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src\bindings\ofxLuaBindings.h" />
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src\ofxLua.h" />
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src\ofxLuaFileWriter.h" />
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxLua\src\bindings\ofxLuaBindings.h" />
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxLua\src\ofxLua.h" />
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxLua\src\ofxLuaFileWriter.h" />
     <ClInclude Include="src\Convert.h" />
     <ClInclude Include="src\ofApp.h" />
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxAppEmscriptenWindow.h" />
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenSoundPlayer.h" />
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenSoundStream.h" />
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenURLFileLoader.h" />
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenVideoGrabber.h" />
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenVideoPlayer.h" />
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\include\html5audio.h" />
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\include\html5video.h" />
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxAppEmscriptenWindow.h" />
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxEmscriptenSoundPlayer.h" />
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxEmscriptenSoundStream.h" />
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxEmscriptenURLFileLoader.h" />
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxEmscriptenVideoGrabber.h" />
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxEmscriptenVideoPlayer.h" />
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\include\html5audio.h" />
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\include\html5video.h" />
     <ClInclude Include="src\oflive_editor.h" />
   </ItemGroup>
   <ItemGroup>

@@ -70,7 +70,7 @@
 
 				modalinnerWindow.append(res);
 				
-				modalHeader.append("<table cellspacing='0' cellpadding='0'><tr><td width='90%'><span id='modal_title'></span></td><td width='10%' align='right'><img id='img_close' src='/ui/img/close.png'></img></td></tr></table>");
+				modalHeader.append("<table cellspacing='0' cellpadding='0'><tr><td width='90%'><span id='modal_title'></span></td><td width='10%' align='right'><img id='img_close' src='ui/img/close.png'></img></td></tr></table>");
 
 				//add a loader for further process on the page
 				modalinnerWindow.append("<div id='wait_div_popup' align='center'> </div>");

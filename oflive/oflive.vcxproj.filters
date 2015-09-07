@@ -7,35 +7,35 @@
     <ClCompile Include="src\main.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxAppEmscriptenWindow.cpp">
-      <Filter>addons\ofxEmscripten\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenSoundPlayer.cpp">
-      <Filter>addons\ofxEmscripten\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenSoundStream.cpp">
-      <Filter>addons\ofxEmscripten\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenURLFileLoader.cpp">
-      <Filter>addons\ofxEmscripten\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenVideoGrabber.cpp">
-      <Filter>addons\ofxEmscripten\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenVideoPlayer.cpp">
-      <Filter>addons\ofxEmscripten\src</Filter>
-    </ClCompile>
     <ClCompile Include="src\Convert.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src\ofxLua.cpp">
+    <ClCompile Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxAppEmscriptenWindow.cpp">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxEmscriptenVideoPlayer.cpp">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxEmscriptenSoundPlayer.cpp">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxEmscriptenSoundStream.cpp">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxEmscriptenURLFileLoader.cpp">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxEmscriptenVideoGrabber.cpp">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\of_v20150907_vs_release\addons\ofxLua\src\ofxLua.cpp">
       <Filter>addons\ofxLua\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src\ofxLuaFileWriter.cpp">
-      <Filter>addons\ofxLua\src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src\bindings\desktop\ofxLuaBindings.cpp">
+    <ClCompile Include="..\..\..\common\of_v20150907_vs_release\addons\ofxLua\src\bindings\desktop\ofxLuaBindings.cpp">
       <Filter>addons\ofxLua\src\bindings</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\common\of_v20150907_vs_release\addons\ofxLua\src\ofxLuaFileWriter.cpp">
+      <Filter>addons\ofxLua\src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -80,44 +80,44 @@
     <ClInclude Include="src\ofApp.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxAppEmscriptenWindow.h">
-      <Filter>addons\ofxEmscripten\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenSoundPlayer.h">
-      <Filter>addons\ofxEmscripten\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenSoundStream.h">
-      <Filter>addons\ofxEmscripten\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenURLFileLoader.h">
-      <Filter>addons\ofxEmscripten\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenVideoGrabber.h">
-      <Filter>addons\ofxEmscripten\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\src\ofxEmscriptenVideoPlayer.h">
-      <Filter>addons\ofxEmscripten\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5audio\include\html5audio.h">
-      <Filter>addons\ofxEmscripten\libs\html5audio\include</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxEmscripten\libs\html5video\include\html5video.h">
-      <Filter>addons\ofxEmscripten\libs\html5video\include</Filter>
-    </ClInclude>
     <ClInclude Include="src\Convert.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src\ofxLua.h">
-      <Filter>addons\ofxLua\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src\ofxLuaFileWriter.h">
-      <Filter>addons\ofxLua\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\common\of_v20150707_vs_release\addons\ofxLua\src\bindings\ofxLuaBindings.h">
-      <Filter>addons\ofxLua\src\bindings</Filter>
-    </ClInclude>
     <ClInclude Include="src\oflive_editor.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\include\html5audio.h">
+      <Filter>addons\ofxEmscripten\libs\html5audio\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\include\html5video.h">
+      <Filter>addons\ofxEmscripten\libs\html5video\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxAppEmscriptenWindow.h">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxEmscriptenSoundPlayer.h">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxEmscriptenSoundStream.h">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxEmscriptenURLFileLoader.h">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxEmscriptenVideoGrabber.h">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxEmscripten\src\ofxEmscriptenVideoPlayer.h">
+      <Filter>addons\ofxEmscripten\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxLua\src\ofxLua.h">
+      <Filter>addons\ofxLua\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxLua\src\bindings\ofxLuaBindings.h">
+      <Filter>addons\ofxLua\src\bindings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\common\of_v20150907_vs_release\addons\ofxLua\src\ofxLuaFileWriter.h">
+      <Filter>addons\ofxLua\src</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

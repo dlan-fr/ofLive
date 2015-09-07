@@ -5,7 +5,16 @@
 function init_menu()
 {
     $("#save_script").click(function() {
-       OFLIVE.backend_savescript($('#name_script').text(),OFLIVE.editor.getValue());
+        if(OFLIVE.readonly_script == true)
+                return;
+            
+        if(OFLIVE.opened_script == "") {
+            $("#save_script_name").click();
+        }
+        else {
+            OFLIVE.backend_savescript($('#name_script').text(),OFLIVE.editor.getValue());
+            OFLIVE.backend_loadlua(OFLIVE.editor.getValue());
+        }
     });
     
     $("ul.editor_submenu").parent().append("<span></span>"); //Only shows drop down trigger when js is enabled (Adds empty span tag after ul.subnav*)

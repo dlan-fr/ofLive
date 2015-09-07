@@ -30,7 +30,6 @@ ul.editor_menu li span:hover{
     color: #ff0000;
 }
 ul.editor_menu li span { /*--Drop down trigger styles--*/
-    width: 17px;
     height: 35px;
     float: left;
 }

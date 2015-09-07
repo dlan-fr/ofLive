@@ -1,0 +1,27 @@
+<script type='text/javascript'>
+    $('#modal_title').html('examples lists');
+    var pathcontent = FS.lookupPath('/data/examples');
+    
+    for(var file in pathcontent.node.contents)
+    {
+        if(pathcontent.node.contents.hasOwnProperty(file))
+        {
+            $('#list_scripts').append('<tr class="script_row"><td>'+file+'</td></tr>');
+        }
+    }
+    
+    
+    $(".script_row").click(function(e) {
+        $('#name_script').text($(this).text());
+        OFLIVE.opened_script = $(this).text();
+        OFLIVE.readonly_script = true;
+        $('#name_script').css('color','#ff0000');
+        OFLIVE.backend_openscript($(this).text(),1);
+        $("#img_close").click();
+    } );
+    
+</script>
+
+<table id="list_scripts">
+    
+</table>

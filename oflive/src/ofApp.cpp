@@ -6,6 +6,7 @@ static bool need_script_reload = false;
 static std::vector<char> js_buffer;
 static bool IDBFS_ready = false;
 static ofDirectory scripts_directory;
+static ofDirectory example_directory;
 static ofxLua lua;
 
 
@@ -29,7 +30,7 @@ int backend_newscript(const char* script_name)
 	ofBuffer scriptBuffer = ofBufferFromFile("scripts/basescript.lua");
 	std::string script_n(script_name);
 
-	std::string file_path(scripts_directory.getAbsolutePath() + script_n+".lua");
+	std::string file_path(scripts_directory.getAbsolutePath() + "/"+script_n+".lua");
 
 	ofstream ostr(file_path.c_str(), ios_base::out);
 
@@ -56,16 +57,20 @@ int backend_newscript(const char* script_name)
 	return 0;
 }
 
-int backend_openscript(const char* script_name)
+int backend_openscript(const char* script_name,int isExample)
 {
-	ofFile script_file(scripts_directory.getAbsolutePath() + script_name);
+
+	ofFile script_file(scripts_directory.getAbsolutePath() + "/"+script_name);
+
+	if(isExample)
+		script_file.open(example_directory.getAbsolutePath() + "/"+script_name);
 
 	if(!script_file.exists())
 	{
 		ofLogError() << "Script file "+script_file.getFileName()+" doesn't exist!";
 		return 0;
 	}
-
+	 
 	ifstream istr(script_file.getAbsolutePath(), ios_base::in);
 	ofBuffer scriptBuffer(istr); 
 	istr.close();
@@ -82,7 +87,7 @@ int backend_openscript(const char* script_name)
 
 int backend_savescript(const char* script_name,const char* scriptcontent)
 {
-	ofFile save_script(scripts_directory.getAbsolutePath() + script_name);
+	ofFile save_script(scripts_directory.getAbsolutePath() + "/"+ script_name);
 
 	ofBuffer scriptBuffer = ofBuffer(scriptcontent,strlen(scriptcontent)+1);
 
@@ -142,12 +147,16 @@ void ofApp::setup() {
 	//load the script content in the editor
 	ofBuffer scriptBuffer = ofBufferFromFile("scripts/basescript.lua");
 
+	example_directory.open("/data/examples/");
+
 	editor_loadscript(scriptBuffer.getData());
 
 	// call the script's setup() function
 	lua.scriptSetup();
 
 	emscripten_run_script("showOutputWindow()");
+
+
 }
 
 //--------------------------------------------------------------
