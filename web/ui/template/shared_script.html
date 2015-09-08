@@ -1,0 +1,36 @@
+<script type='text/javascript'>
+    $('#modal_title').html('Shared scripts');
+    
+    $(".script_row").click(function(e) {
+        
+        var uniqid = $(this).children('#scr_id').text();
+        var script_name = $(this).children('#scr_name').text();
+        
+        $.ajax({
+                type: "GET",
+                url: <?php echo WebConfig::$SHARE_FETCH_URL ?>+uniqid,
+                data: Targetdata,
+                success: function(res) {
+                     $('#name_script').text(script_name);
+                    OFLIVE.opened_script = script_name;
+                    $('#name_script').css('color','#ff0000');
+                    OFLIVE.readonly_script = true;
+                    OFLIVE.editor.setValue(res);
+                    OFLIVE.backend_loadlua(res);
+
+                    $("#img_close").click();
+                },
+           });
+        
+        $("#img_close").click();
+    } );
+    
+</script>
+
+
+
+<table id="list_shared">
+<?php foreach ($shared_data as $shared_row):?>
+<tr class="script_row"><td id="scr_id"><?php echo $shared_row['uniqid'] ?></td><td id="scr_name"><?php echo $shared_row['name'] ?></td><td id ="scr_shared"><?php echo $shared_row['date_shared'] ?></td><td id="scr_numaccess"><?php echo $shared_row['num_access'] ?></td></tr>
+<?php endforeach; ?>    
+</table>

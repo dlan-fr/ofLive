@@ -2,7 +2,7 @@
  * OfLive javascript async loader
  */
 
-function loadJsData(jsfile,canvasid,successFunc,bartext,datatyp)
+function loadJsData(jsfile,fsize,canvasid,successFunc,bartext,datatyp)
 {
 	 var progressElem = $('#progress'); 
 	 $.ajax (
@@ -18,6 +18,10 @@ function loadJsData(jsfile,canvasid,successFunc,bartext,datatyp)
 					 {
 						drawProgressBar(evt.loaded,evt.total,canvasid,bartext);
 					 }
+                                         else if(fsize != 0)
+                                         {
+                                             drawProgressBar(evt.loaded,fsize,canvasid,bartext);
+                                         }
 				 }
 				 
 				 return xhr;
@@ -70,11 +74,11 @@ function showOutputWindow()
         document.getElementById('editor').style.display = '';
 }
 
-function LoadApp()
+function LoadApp(app_size,data_size)
 {
-	  loadJsData('emscripten_app/oflive.data','progresscanvas',function( data, textStatus, jqxhr ) 
+	  loadJsData('emscripten_app/oflive.data',data_size,'progresscanvas',function( data, textStatus, jqxhr ) 
 	  {
-                loadJsData('emscripten_app/oflive.js','progresscanvas',function(data, textStatus, jqxhr) {
+                loadJsData('emscripten_app/oflive.js',app_size,'progresscanvas',function(data, textStatus, jqxhr) {
 							drawProgressBar(100,100,'progresscanvas','Launching application...');
 					},'Downloading openframeworks...','script');
 	 },'Downloading assets...','text');

@@ -16,7 +16,7 @@ class HttpContext
             session_start();
             
             //handle user request
-            $this->Request = new HTTPRequest($_SESSION,$_REQUEST,$_POST);
+            $this->Request = new HTTPRequest($_SESSION,$_GET,$_POST);
 
 	}
         

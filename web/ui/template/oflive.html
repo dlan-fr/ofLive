@@ -22,7 +22,7 @@
     <li><span id="new_script" class="popup">New</span></li>
     <li><span id="open_script" class="popup">Open</span></li>
     <li><span id="save_script">Save</span></li>
-    <li><span id="share_script" class="popup">Share</span></li>
+    <li><span id="share_script" class="popup" data-name="save_script_name" data-editor="get" data-act="POST">Share</span></li>
     
     <li><span id="shared_script" class="popup">Shared&nbsp;scripts</span></li>
     
@@ -49,6 +49,8 @@
 
 
 <script type='text/javascript'>
+     var app_size = <?php echo $js_app_size ?>;
+     var data_size = <?php echo $data_app_size ?>;
      var Module = {
         preRun: [],
         postRun: [],
@@ -106,7 +108,7 @@
       document.getElementById('top_editor').style.display = 'none';
       document.getElementById('editor').style.display = 'none';
       
-      LoadApp();
+      LoadApp(app_size,data_size);
       
     </script>
 </body>

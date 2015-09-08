@@ -34,12 +34,29 @@
 					var target_action = this.id;
 					var Targetdata = this.getAttribute("data-popup");
                                         
+                                        var target_type = "GET";
+                                        var type_data = this.getAttribute("data-act");
+                                        
+                                        if(type_data != null && type_data == "POST")
+                                           target_type = "POST";
+                                        
+                                        
                                         if(Targetdata== null)
                                             Targetdata = "";
+                                        
+                                        var editor_data = this.getAttribute("data-editor");
+                                        
+                                        if(editor_data != null && editor_data == "get")
+                                            Targetdata = appendData(Targetdata,"content="+OFLIVE.editor.getValue());
+                                        
+                                        var name_data = this.getAttribute("data-name");
+                                        
+                                        if(name_data != null)
+                                            Targetdata = appendData(Targetdata,"name="+$('#'+name_data).text());
 					
 					
 					$.ajax({
-					type: "GET",
+					type: target_type,
 					url: "index.php?action="+target_action,
                                         data: Targetdata,
 					success: pageload_callback
@@ -47,6 +64,14 @@
 					
 				});
 			});
+                        
+                        function appendData(data_obj,data_to_append)
+                        {
+                            if(data_obj == "")
+                                return data_to_append;
+                            else
+                                return data_obj + "&"+data_to_append;
+                        }
 			
 			//Our function for hiding the modalbox
 			function modalHide() {
