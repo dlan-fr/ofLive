@@ -22,7 +22,7 @@
     <li><span id="new_script" class="popup">New</span></li>
     <li><span id="open_script" class="popup">Open</span></li>
     <li><span id="save_script">Save</span></li>
-    <li><span id="share_script" class="popup" data-name="save_script_name" data-editor="get" data-act="POST">Share</span></li>
+    <li><span id="share_script" class="popup" data-name="name_script" data-editor="get" data-act="POST">Share</span></li>
     
     <li><span id="shared_script" class="popup">Shared&nbsp;scripts</span></li>
     
@@ -30,7 +30,11 @@
     
 </ul>
     
-    <span id="name_script">Unnamed_script.lua</span>
+    <span id="name_script">
+        <?php if($is_shared) : echo $share_file_name; else: ?>
+        Unnamed_script.lua
+        <?php endif; ?>
+    </span>
 </div>
  
  <span id="save_script_name" class="popup" style="display: none;">save_script</span>
@@ -48,9 +52,15 @@
 <script src="ui/scripts/loader.js" type="text/javascript" charset="utf-8"></script>
 
 
+<div id="share_content" style="display: none;">
+    <?php if($is_shared) : echo $share_content; endif;?>
+</div>
+
+
 <script type='text/javascript'>
      var app_size = <?php echo $js_app_size ?>;
      var data_size = <?php echo $data_app_size ?>;
+     
      var Module = {
         preRun: [],
         postRun: [],

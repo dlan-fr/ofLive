@@ -1,6 +1,9 @@
 <?php
 
+$is_shared = false;
+
 require_once("conf/webconfig.php");
+require_once("libs/class.log.php");
 require_once("libs/class.httpcontext.php");
 
 //create a new context and process current request

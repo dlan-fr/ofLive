@@ -121,7 +121,7 @@ void ofApp::setup() {
 
 	editor_init();
 	// scripts to run
-	scripts.push_back("scripts/basescript.lua");
+	scripts.push_back("basescript.lua");
 	 
 	//TODO:
 	//list all scripts existing in indexedDb, load them and push them back
@@ -141,21 +141,32 @@ void ofApp::setup() {
 	// true = change working directory to the script's parent dir
 	// so lua will find scripts with relative paths via require
 	// note: changing dir does *not* affect the OF data path
-	lua.doScript(scripts[currentScript],true);
-
-
-	//load the script content in the editor
-	ofBuffer scriptBuffer = ofBufferFromFile("scripts/basescript.lua");
-
 	example_directory.open("/data/examples/");
 
-	editor_loadscript(scriptBuffer.getData());
+	lua.setPackageRoot("/data/scripts/");
+
+
+	if(!editor_isshare())
+	{
+		lua.doScript(scripts[currentScript],true);
+		//load the script content in the editor
+		ofBuffer scriptBuffer = ofBufferFromFile("scripts/basescript.lua");
+		editor_loadscript(scriptBuffer.getData());
+	}
+	else
+	{
+		char* raw_data = emscripten_run_script_string("$('#share_content').text()");
+
+		std::string share_buffer(raw_data);
+
+		lua.doString(share_buffer);
+		editor_loadscript(share_buffer.c_str());
+	}
 
 	// call the script's setup() function
 	lua.scriptSetup();
 
 	emscripten_run_script("showOutputWindow()");
-
 
 }
 

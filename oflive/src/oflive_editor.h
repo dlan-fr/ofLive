@@ -4,6 +4,7 @@ extern "C" {
 	//functions calling javascript library from c
 	extern void editor_init();
 	extern void editor_loadscript(const char* scriptcontent);
+	extern int editor_isshare();
 
 	//functions calling c code from javascript
 	int backend_loadlua(const char* scriptcontent);

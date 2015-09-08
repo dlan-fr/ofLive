@@ -61,6 +61,14 @@ var LibraryOfLive = {
         var scriptcontent = Pointer_stringify(scriptptr);
         OFLIVE.editor.setValue(scriptcontent);
     },
+    
+    editor_isshare: function()
+    {
+        if($('#share_content').text())
+            return 1;
+           
+        return 0;
+    },
 
 }
 

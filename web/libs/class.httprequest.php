@@ -7,6 +7,7 @@ class HTTPRequest
 	public $action = null;
 	public $Browser = null;
 	public $FormArray = null;
+        public $uid = null;
 	
 	function HTTPRequest($SessionArray,$request_array,$form_array)
 	{
@@ -26,6 +27,11 @@ class HTTPRequest
 			if(in_array($request_array['action'],WebConfig::$actions))
 				$this->action = $request_array['action'];
 		}
+                
+                if(isset($request_array['uid']))
+                {
+                    $this->uid = $request_array['uid'];
+                }
 		
                 //filter html char
 		 foreach ($form_array as $key => $val) 

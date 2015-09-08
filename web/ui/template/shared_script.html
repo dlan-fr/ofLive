@@ -8,8 +8,7 @@
         
         $.ajax({
                 type: "GET",
-                url: <?php echo WebConfig::$SHARE_FETCH_URL ?>+uniqid,
-                data: Targetdata,
+                url: <?php echo '"'.WebConfig::$SHARE_FETCH_URL.'"' ?>+uniqid,
                 success: function(res) {
                      $('#name_script').text(script_name);
                     OFLIVE.opened_script = script_name;

@@ -72,12 +72,13 @@ class MysqlClient
             if(empty($pDbase))
                     $pDbase = WebConfig::$MYSQL_DB; 
 
-            $this->connection = mysqli_connect(WebConfig::$MYSQL_SERVEUR,$pDbuser, $pDbpass, $pDbase); 
+            $this->connection = mysqli_connect(WebConfig::$MYSQL_SERVER,$pDbuser, $pDbpass, $pDbase); 
 
             if (mysqli_connect_errno()) 
             {
               $e = oci_error();
-              common_log("Connexion à mysql impossible : ". mysqli_connect_error(),LogLevel_Error);
+              
+              log_manager::log("Connexion à mysql impossible : ". mysqli_connect_error(),LogLevel_Error);
               return  null;
             }
 
@@ -100,7 +101,7 @@ class MysqlClient
 
             if (!mysqli_stmt_prepare($SQLstatement, $SQLquery))
             {
-                     common_log("Erreur prep requete ".$SQLquery." ". mysqli_stmt_error($SQLstatement),LogLevel_Error);
+                     log_manager::log("Erreur prep requete ".$SQLquery." ". mysqli_stmt_error($SQLstatement),LogLevel_Error);
                      mysqli_stmt_close($SQLstatement);
                      return null;
             }
@@ -114,7 +115,7 @@ class MysqlClient
 
                 foreach($params as $key => $value)
                 {
-                        $bind_params[1] .= gettype_var($value);
+                        $bind_params[1] .= $this->gettype_var($value);
                         $bind_params[] = &$params[$key];
                 }
 
@@ -128,14 +129,14 @@ class MysqlClient
 
             if(!$check)
             {
-                common_log("Erreur exécution requete ".$SQLquery." ". mysqli_stmt_error($SQLstatement),LogLevel_Error);
+                log_manager::log("Erreur exécution requete ".$SQLquery." ". mysqli_stmt_error($SQLstatement),LogLevel_Error);
             }
             else
             {
 
                 mysqli_stmt_store_result($SQLstatement);
 
-                while($data = fetchAssocStatement($SQLstatement))
+                while($data = $this->fetchAssocStatement($SQLstatement))
                 {
                          array_push($Result, $data);
                 }
@@ -160,7 +161,7 @@ class MysqlClient
 
             if (!mysqli_stmt_prepare($SQLstatement, $SQLquery))
             {
-                     common_log("Erreur prep requete ".$SQLquery." ". mysqli_stmt_error($SQLstatement),LogLevel_Error);
+                     log_manager::log("Erreur prep requete ".$SQLquery." ". mysqli_stmt_error($SQLstatement),LogLevel_Error);
                      mysqli_stmt_close($SQLstatement);
                      return null;
             }
@@ -174,7 +175,7 @@ class MysqlClient
 
                 foreach($params as $key => $value)
                 {
-                        $bind_params[1] .= gettype_var($value);
+                        $bind_params[1] .= $this->gettype_var($value);
                         $bind_params[] = &$params[$key];
                 }
 
@@ -206,8 +207,7 @@ class MysqlClient
 
             if(!mysqli_stmt_prepare($SQLstatement, $SQLquery))
             {
-                common_log("Erreur requête ".$SQLquery." ".mysqli_stmt_error($SQLstatement));
-                mysqli_stmt_close($SQLstatement);
+                log_manager::log("Erreur requête ".$SQLquery." ".mysqli_stmt_error($SQLstatement));
                 return -1;
             }
 
@@ -220,7 +220,7 @@ class MysqlClient
 
                 foreach($params as $key => $value)
                 {
-                        $bind_params[1] .= gettype_var($value);
+                        $bind_params[1] .= $this->gettype_var($value);
                         $bind_params[] = &$params[$key];
                 }
 
@@ -228,7 +228,7 @@ class MysqlClient
                 print_r($bind_params);
                 $debuglog = ob_get_clean();
 
-                common_log($debuglog);*/
+                log_manager::log($debuglog);*/
 
 
                 call_user_func_array('mysqli_stmt_bind_param', $bind_params);
@@ -240,9 +240,9 @@ class MysqlClient
 
 
             if(mysqli_stmt_execute($SQLstatement))
-                $result = mysqli_affected_rows($connection);
+                $result = mysqli_affected_rows($this->connection);
             else
-                common_log("Error  query ".$SQLquery." : ".mysqli_stmt_error($SQLstatement));
+                log_manager::log("Error  query ".$SQLquery." : ".mysqli_stmt_error($SQLstatement));
 
             mysqli_stmt_close($SQLstatement);
 
@@ -292,7 +292,7 @@ class MysqlClient
 
             $type = gettype($var);
             //si aucun type valable
-            common_log('Erreur de type, '.$type.'non supporté');
+            log_manager::log('Erreur de type, '.$type.'non supporté');
             return "";
     }
 }

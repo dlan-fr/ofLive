@@ -7,7 +7,7 @@ $o_mysql = new MysqlClient();
 $o_mysql->connect_db();
 
 
-$query_share = 'INSERT INTO shared_script(uniqid,name,date_shared,content) VALUES(?,?,?,?)';
+$query_share = 'INSERT INTO shared_scripts(uniqid,name,date_shared,content) VALUES(?,?,?,?)';
 
 $now = getdate();
 	
