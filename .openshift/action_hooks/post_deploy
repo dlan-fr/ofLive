@@ -16,7 +16,7 @@ echo "Compute gzipped size"
 
 EMSCRIPTEN_APP_SIZE="$(gzip -c ~/app-root/data/emscripten_app/oflive.js | wc -c)"
 
-EMSCRIPTEN_DATA_SIZE="$(gzip -c ~/app-root/data/emscripten_app/oflive.data | wc -c')"
+EMSCRIPTEN_DATA_SIZE="$(gzip -c ~/app-root/data/emscripten_app/oflive.data | wc -c)"
 
 echo "Write ini file"
 
