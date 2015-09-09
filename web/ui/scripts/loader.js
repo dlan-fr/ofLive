@@ -2,7 +2,7 @@
  * OfLive javascript async loader
  */
 
-function loadJsData(jsfile,fsize,canvasid,successFunc,bartext,datatyp)
+function loadJsData(jsfile,fsize,gzsize,canvasid,successFunc,bartext,datatyp)
 {
 	 var progressElem = $('#progress'); 
 	 $.ajax (
@@ -20,7 +20,10 @@ function loadJsData(jsfile,fsize,canvasid,successFunc,bartext,datatyp)
 					 }
                                          else if(fsize != 0)
                                          {
-                                             drawProgressBar(evt.loaded,fsize,canvasid,bartext);
+                                             if($.browser.mozilla)//somehow firefox report gzipped loaded size while chrome report uncompressed size
+                                                 drawProgressBar(evt.loaded,gzsize,canvasid,bartext);
+                                             else
+                                                drawProgressBar(evt.loaded,fsize,canvasid,bartext);
                                          }
 				 }
 				 
@@ -74,11 +77,11 @@ function showOutputWindow()
         document.getElementById('editor').style.display = '';
 }
 
-function LoadApp(app_size,data_size)
+function LoadApp(app_size,data_size,app_gzip,data_gzip)
 {
-	  loadJsData('emscripten_app/oflive.data',data_size,'progresscanvas',function( data, textStatus, jqxhr ) 
+	  loadJsData('emscripten_app/oflive.data',data_size,data_gzip,'progresscanvas',function( data, textStatus, jqxhr ) 
 	  {
-                loadJsData('emscripten_app/oflive.js',app_size,'progresscanvas',function(data, textStatus, jqxhr) {
+                loadJsData('emscripten_app/oflive.js',app_size,app_gzip,'progresscanvas',function(data, textStatus, jqxhr) {
 							drawProgressBar(100,100,'progresscanvas','Launching application...');
 					},'Downloading openframeworks...','script');
 	 },'Downloading assets...','text');

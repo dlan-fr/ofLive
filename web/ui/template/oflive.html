@@ -44,6 +44,7 @@
     
 <script src="ui/ace-builds-1.2.0/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script src="ui/scripts/jquery-2.1.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="ui/scripts/jquery.browser.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="ui/scripts/jquery.forms.js" type="text/javascript" charset="utf-8"></script>
 <script src="ui/scripts/jquery.popup.js" type="text/javascript" charset="utf-8"></script>
 <script src="ui/scripts/jquery.msgbox.js" type="text/javascript" charset="utf-8"></script>
@@ -60,6 +61,8 @@
 <script type='text/javascript'>
      var app_size = <?php echo $js_app_size ?>;
      var data_size = <?php echo $data_app_size ?>;
+     var app_gzip = <?php echo $js_gzip ?>;
+     var data_gzip = <?php echo $data_gzip ?>;
      
      var Module = {
         preRun: [],
@@ -118,7 +121,7 @@
       document.getElementById('top_editor').style.display = 'none';
       document.getElementById('editor').style.display = 'none';
       
-      LoadApp(app_size,data_size);
+      LoadApp(app_size,data_size,app_gzip,data_gzip);
       
     </script>
 </body>
