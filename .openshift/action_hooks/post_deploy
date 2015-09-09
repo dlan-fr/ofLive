@@ -1,3 +1,14 @@
 #!/bin/bash
 
-echo "test deploy hook"
+echo "Copy ace editor code"
+
+cp -R  ~/app-root/data/ace-builds-1.2.0 ~/app-root/repo/web/ui
+
+echo "Copy Emscripten data"
+
+cp -R ~/app-root/data/emscripten_app ~/app-root/repo/web
+
+echo "Copy openshift weconfig"
+
+cp -f ~/app-root/data/webconfig.php ~/app-root/repo/web/conf
+
