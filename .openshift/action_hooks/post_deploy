@@ -14,6 +14,11 @@ cp -f ~/app-root/data/webconfig.php ~/app-root/repo/web/conf
 
 echo "Compute gzipped size"
 
-export EMSCRIPTEN_APP_SIZE=$(gzip -c ~/app-root/data/emscripten_app/oflive.js | wc -c)
+EMSCRIPTEN_APP_SIZE="$(gzip -c ~/app-root/data/emscripten_app/oflive.js | wc -c)"
 
-export EMSCRIPTEN_DATA_SIZE=$(gzip -c ~/app-root/data/emscripten_app/oflive.data | wc -c)
+EMSCRIPTEN_DATA_SIZE="$(gzip -c ~/app-root/data/emscripten_app/oflive.data | wc -c')"
+
+echo "Write ini file"
+
+echo -e "app_size = $EMSCRIPTEN_APP_SIZE \ndata_size = $EMSCRIPTEN_DATA_SIZE" > ~/app-root/repo/web/conf/em_size.ini
+

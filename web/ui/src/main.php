@@ -11,11 +11,12 @@ if($context->Request->action == null)
     $js_gzip = 0;
     $data_gzip = 0;
     
-    if(isset($_ENV['EMSCRIPTEN_APP_SIZE']))
-        $js_gzip = $_ENV['EMSCRIPTEN_APP_SIZE'];
-    
-    if(isset($_ENV['EMSCRIPTEN_DATA_SIZE']))
-        $data_gzip = $_ENV['EMSCRIPTEN_DATA_SIZE'];
+    if(file_exists('conf/em_size.ini'))
+    {
+        $size_array = parse_ini_file('conf/em_size.ini');
+        $js_gzip = $size_array['app_size'];
+        $data_gzip = $size_array['data_size'];
+    }
     
     include('ui/template/oflive.html');
 }
