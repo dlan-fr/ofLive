@@ -160,7 +160,7 @@
       <AdditionalDependencies>D:\devel\common\of_v20150907_vs_release\libs\openFrameworksCompiled\lib\vs\Emscripten\openframeworksLib_debug.bc;D:\devel\common\of_v20150907_vs_release\libs\freetype\lib\emscripten\libfreetype.bc;D:\devel\common\of_v20150907_vs_release\libs\FreeImage\lib\emscripten\libfreeimage.a;D:\devel\common\of_v20150907_vs_release\libs\tess2\lib\emscripten\libtess2.a;D:\devel\common\of_v20150907_vs_release\libs\boost\lib\emscripten\libboost_filesystem.a;D:\devel\common\of_v20150907_vs_release\libs\boost\lib\emscripten\libboost_system.a;D:\devel\common\lua-5.2.3\Release\liblua.bc</AdditionalDependencies>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
-      <LinkerOptimizationLevel>O1</LinkerOptimizationLevel>
+      <LinkerOptimizationLevel>O3</LinkerOptimizationLevel>
       <JsLibrary>D:\devel\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5video\lib\emscripten\library_html5video.js;D:\devel\common\of_v20150907_vs_release\addons\ofxEmscripten\libs\html5audio\lib\emscripten\library_html5audio.js;.\library_editor.js;%(JsLibrary)</JsLibrary>
       <AdditionalOptions>-s TOTAL_MEMORY=134217728 --memory-init-file 0 --preload-file bin/data@data  -Wl,--as-needed -Wl,--gc-sections -g3 -s DISABLE_EXCEPTION_CATCHING=0 -s EXPORTED_FUNCTIONS='["_main","_backend_loadlua","_backend_newscript","_backend_openscript","_backend_savescript"]' %(AdditionalOptions)</AdditionalOptions>
       <EchoCommandLines>true</EchoCommandLines>
