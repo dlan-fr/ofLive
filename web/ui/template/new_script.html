@@ -1,5 +1,5 @@
 <script type='text/javascript'>
-    $('#modal_title').html('new script');
+    $('#modal_title').html('New script');
     
     $('#newscript_form').submit(function(e){
            if($("#script_name").val())
@@ -7,6 +7,8 @@
                 $('#name_script').text($("#script_name").val()+".lua");
                 OFLIVE.opened_script = $("#script_name").val()+".lua";
                 OFLIVE.readonly_script = false;
+                $('#save_script').attr('class','enabled_link');
+                $('#share_script').attr('class','enabled_link');
                 OFLIVE.backend_newscript($("#script_name").val());
                 $('#name_script').css('color','#ffffff');
                 
@@ -27,8 +29,7 @@
     <fieldset>
         <legend>Please enter a script name</legend>
         
-        Script Name: <input id="script_name" name="script_name" type="text" maxlength="255" /> <br/>
-        
-        <input type="submit" id="btn_simple_submit" name="btn_simple_submit">
+        Script Name: <input id="script_name" name="script_name" type="text" maxlength="255" /> <br/><br/>
+         <input type="submit" id="btn_simple_submit" name="btn_simple_submit" value="Create new script">
     </fieldset>
 </form>

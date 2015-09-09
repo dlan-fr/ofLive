@@ -14,6 +14,8 @@
                     OFLIVE.opened_script = script_name;
                     $('#name_script').css('color','#ff0000');
                     OFLIVE.readonly_script = true;
+                    $('#save_script').attr('class','disabled_link');
+                    $('#share_script').attr('class','disabled_link');
                     OFLIVE.editor.setValue(res);
                     OFLIVE.backend_loadlua(res);
 
@@ -28,8 +30,15 @@
 
 
 
-<table id="list_shared">
+<?php if(count($shared_data) > 0) : ?>
+<table id="list_shared" class="script_table">
+    <tr class="script_header"><th>id</th><th>name</th><th>share date</th><th>Access count</th> </tr>
 <?php foreach ($shared_data as $shared_row):?>
 <tr class="script_row"><td id="scr_id"><?php echo $shared_row['uniqid'] ?></td><td id="scr_name"><?php echo $shared_row['name'] ?></td><td id ="scr_shared"><?php echo $shared_row['date_shared'] ?></td><td id="scr_numaccess"><?php echo $shared_row['num_access'] ?></td></tr>
 <?php endforeach; ?>    
 </table>
+<?php else: ?>
+
+<span class="empty_list_span">No script shared yet!</span>
+
+<?php endif;?>

@@ -8,6 +8,8 @@
                 OFLIVE.opened_script = $("#script_name").val()+".lua";
                 $('#name_script').css('color','#ffffff');
                 OFLIVE.readonly_script = false;
+                $('#save_script').attr('class','enabled_link');
+                $('#share_script').attr('class','enabled_link');
                 
                 OFLIVE.backend_savescript($('#name_script').text(),OFLIVE.editor.getValue());
                 OFLIVE.backend_loadlua(OFLIVE.editor.getValue());

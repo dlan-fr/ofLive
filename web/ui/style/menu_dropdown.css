@@ -19,21 +19,33 @@ ul.editor_menu li {
 }
 
 
-ul.editor_menu li span{
+ul.editor_menu li span.enabled_link{
     padding: 10px 5px;
     color: #fff;
     display: block;
     text-decoration: none;
     float: left;
 }
-ul.editor_menu li span:hover{
+ul.editor_menu li span.enabled_link:hover{
     color: #ff0000;
 }
 ul.editor_menu li span { /*--Drop down trigger styles--*/
     height: 35px;
     float: left;
 }
+
 ul.editor_menu li span.subhover {background-position: center bottom; cursor: pointer;} /*--Hover effect for trigger--*/
+
+ul.editor_menu li span.disabled_link{
+    padding: 10px 5px;
+    color: #666;
+    display: block;
+    text-decoration: none;
+    float: left;
+    cursor: default;
+}
+
+
 ul.editor_menu li ul.editor_submenu {
     list-style: none;
     position: absolute; /*--Important - Keeps editor_submenu from affecting main navigation flow--*/

@@ -26,11 +26,20 @@ var LibraryOfLive = {
             Module.print("OfLive: End scripts sync");
             Module.syncdone = 1;
        });
+       
+       //check if we load a shared script, in this case readonly mode
+       if($.trim($('#share_content').text()))
+       {
+           OFLIVE.opened_script =  $('#name_script').text();
+           OFLIVE.readonly_script = true;
+           $('#save_script').attr('class','disabled_link');
+           $('#shared_script').attr('class','disabled_link');
+       }
         
         //bind c glue functions
         OFLIVE.backend_loadlua = Module.cwrap('backend_loadlua','number',['string']);
         OFLIVE.backend_newscript = Module.cwrap('backend_newscript','number',['string']);
-        OFLIVE.backend_openscript = Module.cwrap('backend_openscript','number',['string','number']);
+        OFLIVE.backend_openscript = Module.cwrap('backend_openscript','number',['string','number','string']);
         OFLIVE.backend_savescript = Module.cwrap('backend_savescript','number',['string','string']);
         
         //custom commands
@@ -64,7 +73,7 @@ var LibraryOfLive = {
     
     editor_isshare: function()
     {
-        if($('#share_content').text())
+        if($.trim($('#share_content').text()))
             return 1;
            
         return 0;

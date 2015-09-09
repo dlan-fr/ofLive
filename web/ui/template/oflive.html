@@ -19,14 +19,14 @@
 
 <div id="top_editor">
 <ul class="editor_menu">
-    <li><span id="new_script" class="popup">New</span></li>
-    <li><span id="open_script" class="popup">Open</span></li>
-    <li><span id="save_script">Save</span></li>
-    <li><span id="share_script" class="popup" data-name="name_script" data-editor="get" data-act="POST">Share</span></li>
+    <li><span id="new_script" class="enabled_link" data-behavior="popup">New</span></li>
+    <li><span id="open_script" class="enabled_link" data-behavior="popup">Open</span></li>
+    <li><span id="save_script" class="enabled_link" >Save</span></li>
+    <li><span id="share_script"  class="disabled_link" data-behavior="popup" data-name="name_script" data-editor="get" data-act="POST">Share</span></li>
     
-    <li><span id="shared_script" class="popup">Shared&nbsp;scripts</span></li>
+    <li><span id="shared_script" class="enabled_link" data-behavior="popup">Shared&nbsp;scripts</span></li>
     
-    <li><span id="example_script" class="popup">Examples</span></li>
+    <li><span id="example_script" class="enabled_link" data-behavior="popup">Examples</span></li>
     
 </ul>
     
@@ -37,7 +37,7 @@
     </span>
 </div>
  
- <span id="save_script_name" class="popup" style="display: none;">save_script</span>
+ <span id="save_script_name" data-behavior="popup" style="display: none;">save_script</span>
 
 <div id="editor">
 </div>

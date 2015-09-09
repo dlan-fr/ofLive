@@ -11,7 +11,10 @@
 			return this.each(function() {
 				//Listen for clicks on objects passed to the plugin
 				$(this).click(function(e) {
-					
+					//check first if the link is not disabled
+                                        if($(this).hasClass('disabled_link'))
+                                            return;
+                                        
 					//Append the overlay to the document body
 					
 					$("body").append(overlay.click(function() { modalHide(); }));

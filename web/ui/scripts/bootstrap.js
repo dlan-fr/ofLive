@@ -14,8 +14,8 @@ function init(onlyform)
 	else
 	{
 		//remove existing onclick function
-		$('span[class*=popup]').unbind('click');
-		$('span[class*=popup]').modalPanel();
+		$('span[data-behavior*=popup]').unbind('click');
+		$('span[data-behavior*=popup]').modalPanel();
 		$('form[name*=ajaxform]').ajaxforms();
 	}
 }

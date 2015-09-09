@@ -12,12 +12,13 @@
 
 #modal-header
 {
-	background-color: #c3e2ff;
+	background-color: black;
 	border-top: 2px solid black;
 	border-left: 2px solid black;
 	border-right: 2px solid black;
 	height: 20px;
 	padding: 2px 4px 0px 4px;
+        color: white;
 }
 
 #modal-header img
@@ -34,11 +35,42 @@
 
 #modal-innerwindow
 {
-	 background-color: white;
-	 padding: 0px 5px 5px 5px;
+	 background-color: #222;
+	 padding: 4px 4px 4px 4px;
 	 border-bottom: 2px solid black;
 	 border-left: 2px solid black;
 	 border-right: 2px solid black;
+}
+
+#modal-innerwindow
+{
+    color:white;
+}
+
+#modal-innerwindow fieldset
+{
+    display:block;
+    margin: 1.0em auto;
+    text-align: center;
+}
+
+#modal-innerwindow input[type="text"]
+{
+    border: 1px solid white;
+    background-color: #222;
+    color: white;
+}
+
+#modal-innerwindow input[type="text"]:focus
+{
+    background-color: black;
+}
+
+#modal-innerwindow input[type="submit"]
+{
+    color: white;
+    background-color:#222;
+    border:1px solid white;
 }
 
 
@@ -60,4 +92,18 @@
     left: 50%; 
     margin: -6px 0 0 -104px; /* -height/2 0 0 -width/2 */ 
 } 
+
+.empty_list_span
+{
+    text-align: center;
+    width: 100%;
+}
+
+
+.category
+{
+    color:lightgray;   
+    font-style: italic;
+    font-size: 1.2em;
+}
 

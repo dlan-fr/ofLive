@@ -57,13 +57,13 @@ int backend_newscript(const char* script_name)
 	return 0;
 }
 
-int backend_openscript(const char* script_name,int isExample)
+int backend_openscript(const char* script_name,int isExample,const char* type)
 {
 
 	ofFile script_file(scripts_directory.getAbsolutePath() + "/"+script_name);
 
 	if(isExample)
-		script_file.open(example_directory.getAbsolutePath() + "/"+script_name);
+		script_file.open(example_directory.getAbsolutePath() + "/"+type+"/" +script_name);
 
 	if(!script_file.exists())
 	{
@@ -121,7 +121,7 @@ void ofApp::setup() {
 
 	editor_init();
 	// scripts to run
-	scripts.push_back("basescript.lua");
+	scripts.push_back("scripts/basescript.lua");
 	 
 	//TODO:
 	//list all scripts existing in indexedDb, load them and push them back

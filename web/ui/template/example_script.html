@@ -1,12 +1,20 @@
 <script type='text/javascript'>
-    $('#modal_title').html('examples lists');
+    $('#modal_title').html('Examples lists');
     var pathcontent = FS.lookupPath('/data/examples');
     
-    for(var file in pathcontent.node.contents)
+    for(var directory in pathcontent.node.contents)
     {
-        if(pathcontent.node.contents.hasOwnProperty(file))
+        if(pathcontent.node.contents.hasOwnProperty(directory) && pathcontent.node.contents[directory].mode == 16895)
         {
-            $('#list_scripts').append('<tr class="script_row"><td>'+file+'</td></tr>');
+            $('#list_scripts').append('<span id="title_table" class="category">'+directory+'</span>')
+            $('#list_scripts').append('<table id="'+directory+'" class="script_table example_table"></table>');
+            
+            var table_node = $('#list_scripts').children('#'+directory);
+            
+            for(var file in pathcontent.node.contents[directory].contents)
+            {
+                table_node.append('<tr class="script_row"><td>'+file+'</td></tr>');
+            }
         }
     }
     
@@ -15,13 +23,16 @@
         $('#name_script').text($(this).text());
         OFLIVE.opened_script = $(this).text();
         OFLIVE.readonly_script = true;
+        $('#save_script').attr('class','disabled_link');
+        $('#share_script').attr('class','disabled_link');
         $('#name_script').css('color','#ff0000');
-        OFLIVE.backend_openscript($(this).text(),1);
+       
+        OFLIVE.backend_openscript($(this).text(),1,$(this).parent().parent().attr('id'));
         $("#img_close").click();
     } );
     
 </script>
 
-<table id="list_scripts">
+<div id ="list_scripts">
     
-</table>
+</div>

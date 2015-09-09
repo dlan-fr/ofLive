@@ -2,13 +2,44 @@
 * OfLive: style for scripts table
 **/
 
+.script_table
+{
+    border-collapse: collapse;
+    border-spacing: 0px;
+    display: table;
+}
+
+.example_table
+{
+    margin-left: 8px;
+}
+
+.script_table, th, td
+{
+    border:medium none;
+    
+}
+
+.script_table th,.script_table td
+{
+    border: 0px;
+    padding: 3px 7px 2px;
+}
+
+.script_table th
+{
+    background-color: #5B5C59;
+    color: lightgrey;
+}
+
 .script_row
 {
-    background-color: #fff;
+    background-color: #222;
+    color: white;
     cursor:pointer;
 }
 
 .script_row:hover
 {
-    background-color: #444;
+    background-color: #8F908A;
 }
