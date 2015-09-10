@@ -9,6 +9,7 @@
     display: table;
 }
 
+
 .example_table
 {
     margin-left: 8px;
@@ -37,6 +38,12 @@
     background-color: #222;
     color: white;
     cursor:pointer;
+}
+
+.opened_row
+{
+    color:gray;
+    cursor: not-allowed;
 }
 
 .script_row:hover

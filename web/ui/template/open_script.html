@@ -1,27 +1,59 @@
 <script type='text/javascript'>
     $('#modal_title').html('Open a script');
-    var pathcontent = FS.lookupPath('/oflivescripts');
     
-    for(var file in pathcontent.node.contents)
+    function loadfilelist()
     {
-        if(pathcontent.node.contents.hasOwnProperty(file))
+        $('#list_scripts').empty();
+        var pathcontent = FS.lookupPath('/oflivescripts');
+
+        for(var file in pathcontent.node.contents)
         {
-            $('#list_scripts').append('<tr class="script_row"><td>'+file+'</td></tr>');
+            if(pathcontent.node.contents.hasOwnProperty(file))
+            {
+                if(file != OFLIVE.opened_script)
+                    $('#list_scripts').append('<tr class="script_row"><td>'+file+'</td><td><a id="'+file+'" class="del_script" href="#"><img src="ui/img/script_delete.png" /></a></td></tr>');
+                else
+                    $('#list_scripts').append('<tr class="opened_row"><td>'+file+'</td><td></td></tr>');
+            }
         }
+        
+         //open a selected script
+        $(".script_row").click(function(e) {
+             $('#name_script').text($.trim($(this).text()));
+             OFLIVE.opened_script = $.trim($(this).text());
+             OFLIVE.readonly_script = false;
+             $('#name_script').css('color','#ffffff');
+             $('#save_script').attr('class','enabled_link');
+             $('#share_script').attr('class','enabled_link');
+
+             OFLIVE.backend_openscript($.trim($(this).text()),0,"none");
+             $("#img_close").click();
+        } );
+
+        //delete a script
+        $(".del_script").click(function(e) {
+
+            var r = confirm("Delete the script "+$(this).attr('id')+" ?");
+
+            if(r == true)
+            {
+                FS.unlink('/oflivescripts/'+$(this).attr('id'));
+
+                //sync script deletion
+                FS.syncfs(false, function(err) {
+                             Module.print("OfLive: sync script deletion");
+                             assert(!err);
+                  });
+
+                loadfilelist();
+            }
+           return false;
+        });
     }
     
+    loadfilelist();
     
-    $(".script_row").click(function(e) {
-         $('#name_script').text($(this).text());
-         OFLIVE.opened_script = $(this).text();
-         OFLIVE.readonly_script = false;
-         $('#name_script').css('color','#ffffff');
-         $('#save_script').attr('class','enabled_link');
-         $('#share_script').attr('class','enabled_link');
-         
-         OFLIVE.backend_openscript($(this).text(),0,"none");
-         $("#img_close").click();
-    } );
+   
     
 </script>
 

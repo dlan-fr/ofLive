@@ -12,12 +12,12 @@
 
  <canvas id="progresscanvas" width="1024" height="768" ></canvas>
     
-<div id="application">
+<div id="application" style="display: none;">
     <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
     <textarea id="output" rows="8" ></textarea>
 </div>
 
-<div id="top_editor">
+<div id="top_editor" style="display: none;">
 <ul class="editor_menu">
     <li><span id="new_script" class="enabled_link" data-behavior="popup">New</span></li>
     <li><span id="open_script" class="enabled_link" data-behavior="popup">Open</span></li>
@@ -39,7 +39,7 @@
  
  <span id="save_script_name" data-behavior="popup" style="display: none;">save_script</span>
 
-<div id="editor">
+<div id="editor" style="display: none;">
 </div>
     
 <script src="ui/ace-builds-1.2.0/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
@@ -116,10 +116,6 @@
       };
       
        Module.filePackagePrefixURL = 'emscripten_app/';
-      
-      document.getElementById('application').style.display = 'none';
-      document.getElementById('top_editor').style.display = 'none';
-      document.getElementById('editor').style.display = 'none';
       
       LoadApp(app_size,data_size,app_gzip,data_gzip);
       
