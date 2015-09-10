@@ -7,6 +7,8 @@ tdfSmall = of.Image()
 transparency = of.Image()
 bikeIcon = of.Image()
 
+local ratio = 0.625
+
 ----------------------------------------------------
 function setup()
 
@@ -16,12 +18,17 @@ function setup()
 	bikers:load("images/bikers.jpg")
 	gears:load("images/gears.gif")
 	tdf:load("images/tdf_1972_poster.jpg")
+	
+	bikers:resize(bikers.width * ratio,bikers.height * ratio)
+	gears:resize(gears.width * ratio,gears.height * ratio)
+	tdf:resize(tdf.width * ratio,tdf.height * ratio)
 
 	tdfSmall:load("images/tdf_1972_poster.jpg")
-	tdfSmall:resize(tdfSmall.width / 4, tdfSmall.height / 4)
+	tdfSmall:resize((tdfSmall.width / 4) * ratio, (tdfSmall.height / 4) *ratio)
 	tdfSmall:setImageType(of.IMAGE_GRAYSCALE)
 
 	transparency:load("images/transparency.png")
+	tranparency:resize(tranparency.width * ratio,transparency.height * ratio)
 	bikeIcon:load("images/bike_icon.png")
 	bikeIcon:setImageType(of.IMAGE_GRAYSCALE)
 end
@@ -37,16 +44,16 @@ function draw()
 	of.setColor(255)
 
 	bikers:draw(0, 0)
-	gears:draw(600, 0)
-	tdf:draw(600, 300)
+	gears:draw(600 * ratio, 0)
+	tdf:draw(600 * ratio, 300*ratio)
 
 	of.setColor(220, 50, 50)
-	tdfSmall:draw(200, 300)
+	tdfSmall:draw(200*ratio, 300*ratio)
 	
 	of.setColor(255)
 	of.enableAlphaBlending()
 	local wave = math.sin(of.getElapsedTimef())
-	transparency:draw(500 + (wave * 100), 20)
+	transparency:draw((500 + (wave * 100)) * ratio, 20 * ratio)
 	of.disableAlphaBlending()
 
 	-- getting the ofColors from an image,
@@ -59,13 +66,13 @@ function draw()
 		for x=1,w-1 do
 			local cur = bikeIcon:getColor(x, y)
 			local size = 1 - (cur:getBrightness() / 255)
-			of.drawCircle(x * diameter, 500 + y * diameter,
+			of.drawCircle((x * diameter) * ratio, (500 + y * diameter) * ratio,
 					  1 + size * diameter / 2)
 		end
 	end
 	
 	of.setColor(255)
-	bikeIcon:draw(190, 490, 20, 20)
+	bikeIcon:draw(190*ratio, 490*ratio, 20, 20)
 end
 
 ----------------------------------------------------

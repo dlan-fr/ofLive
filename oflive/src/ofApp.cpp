@@ -70,6 +70,8 @@ int backend_openscript(const char* script_name,int isExample,const char* type)
 		ofLogError() << "Script file |"+script_file.getAbsolutePath()+"| doesn't exist!";
 		return 0;
 	}
+
+
 	 
 	ifstream istr(script_file.getAbsolutePath(), ios_base::in);
 	ofBuffer scriptBuffer(istr); 
