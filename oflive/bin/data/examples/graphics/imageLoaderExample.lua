@@ -28,7 +28,7 @@ function setup()
 	tdfSmall:setImageType(of.IMAGE_GRAYSCALE)
 
 	transparency:load("images/transparency.png")
-	tranparency:resize(tranparency.width * ratio,transparency.height * ratio)
+	transparency:resize(transparency.width * ratio,transparency.height * ratio)
 	bikeIcon:load("images/bike_icon.png")
 	bikeIcon:setImageType(of.IMAGE_GRAYSCALE)
 end
