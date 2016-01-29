@@ -7,3 +7,6 @@ ofLive is an HTML5 live code editor built on top of :
   
 It goal is to enable rapid protoyping of games / graphics application by removing setup and compilation time, as well
 as offering an easy way of sharing scripts and complete applications.
+
+Try it out here:
+http://oflive-dlan.rhcloud.com/
