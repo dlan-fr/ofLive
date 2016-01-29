@@ -15,7 +15,9 @@ $date_share= sprintf("%04d-%02d-%02d %02d:%02d:%02d",$now['year'],$now['mon'],$n
 
 $share_id = uniqid();
 
-$params = array('uniqid' => $share_id,'name' => $context->Request->FormArray['name'],'date_shared' => $date_share,'content' => $context->Request->FormArray['content']);
+$share_content = html_entity_decode(str_replace('#PLUS#', '+', $context->Request->FormArray['content']));
+
+$params = array('uniqid' => $share_id,'name' => $context->Request->FormArray['name'],'date_shared' => $date_share,'content' => $share_content);
 
 $res_insert = $o_mysql->execute_nonquery($query_share,$params);
 

@@ -37,7 +37,7 @@ $now = getdate();
 	
 $last_access = sprintf("%04d-%02d-%02d %02d:%02d:%02d",$now['year'],$now['mon'],$now['mday'],$now['hours'],$now['minutes'],$now['seconds']);
 
-$query_update_share = 'UPDATE share_scripts SET last_access_date = ?, num_access = num_access+1 WHERE uniqid = ?';
+$query_update_share = 'UPDATE shared_scripts SET last_access_date = ?, num_access = num_access+1 WHERE uniqid = ?';
 
 $o_mysql->execute_nonquery($query_update_share,array('last_access_date' => $last_access,'uniqid' => $context->Request->uid));
 

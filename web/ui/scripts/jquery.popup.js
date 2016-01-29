@@ -50,7 +50,9 @@
                                         var editor_data = this.getAttribute("data-editor");
                                         
                                         if(editor_data != null && editor_data == "get")
-                                            Targetdata = appendData(Targetdata,"content="+OFLIVE.editor.getValue());
+                                            Targetdata = appendData(Targetdata,"content="+OFLIVE.editor.getValue().replace(/\+/g, '#PLUS#'));
+                                        
+                                        
                                         
                                         var name_data = this.getAttribute("data-name");
                                         

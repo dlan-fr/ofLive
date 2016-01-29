@@ -68,7 +68,7 @@ int backend_openscript(const char* script_name,int isExample,const char* type)
 	if(!script_file.exists())
 	{
 		ofLogError() << "Script file |"+script_file.getAbsolutePath()+"| doesn't exist!";
-		return 0;
+		return 0; 
 	}
 
 
